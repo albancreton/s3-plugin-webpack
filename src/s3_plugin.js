@@ -84,7 +84,7 @@ module.exports = class S3Plugin {
                              compiler.options.output.context ||
                              '.'
 
-    compiler.plugin('after-emit', (compilation, cb) => {
+    compiler.plugin('done', (compilation, cb) => {
       var error
 
       if (!hasRequiredUploadOpts)
